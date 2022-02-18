@@ -8,10 +8,7 @@ jobs:
     steps:
       - run: git clone https://github.com/marnade/3w5-h22-tp2-backend.git
       - run: git clone https://github.com/marnade/3w5-h22-tp2-frontend.git
-      - run: cd 3w5-h22-tp2-frontend
-      - run: npm i
-      - run: npm run build
-      - run: cd ..
+      - run: cd 3w5-h22-tp2-frontend && npm i && npm run build
       - run: mkdir 3w5-h22-tp2-backend/public
       - run: cp 3w5-h22-tp2-frontend/build 3w5-h22-tp2-backend/public
 
