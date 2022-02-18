@@ -2,12 +2,9 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.0
 
-jobs:
-  - node/test
-
 workflows:
   test-and-deploy:
     jobs:
-      - checkoutAndTest
+      - node/test
 
       
