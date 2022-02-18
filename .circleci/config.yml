@@ -34,5 +34,3 @@ workflows:
       - deploy:
           requires:
             - integrateFrontend
-
-      
