@@ -5,7 +5,7 @@ orbs:
 jobs:
   checkoutAndTest:
     executor:
-      name: node/default
+      name: node
     steps:
       - checkout
       - node/test
