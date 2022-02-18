@@ -5,5 +5,4 @@ workflows:
   test-and-deploy:
     jobs:
       - node/test:
-          test-results-for: jest
       
