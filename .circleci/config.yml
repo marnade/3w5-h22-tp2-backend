@@ -27,6 +27,6 @@ workflows:
     jobs:
       - checkoutAndTest
       - integrateFrontEnd:
-        requires: checkoutAndTest
+          requires: checkoutAndTest
 
       
