@@ -4,7 +4,9 @@ orbs:
 
 jobs:
   checkoutAndTest:
-    machine: true
+    executor:
+      name: node/default
+      tag: 13.14
     steps:
       - node/test
 
