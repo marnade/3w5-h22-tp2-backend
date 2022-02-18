@@ -31,5 +31,8 @@ workflows:
       - integrateFrontend:
           requires: 
             - node/test
+      - deploy:
+          requires:
+            - integrateFrontend
 
       
