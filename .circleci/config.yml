@@ -4,6 +4,7 @@ orbs:
 
 jobs:
   checkoutAndTest:
+    machine: true
     steps:
       - checkout
       - node/test
