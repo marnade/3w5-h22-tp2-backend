@@ -19,7 +19,7 @@ workflows:
   test-and-deploy:
     jobs:
       - node/test #checkoutAndTest
-      - integrateFrontEnd:
+      - integrateFrontend:
           requires: 
             - node/test
 
