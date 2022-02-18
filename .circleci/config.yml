@@ -5,6 +5,7 @@ orbs:
 jobs:
   checkoutAndTest:
     machine: true
+    steps:
       - node/test
   integrateFrontend:
     machine: true
