@@ -11,7 +11,18 @@ jobs:
       - run: git clone https://github.com/marnade/3w5-h22-tp2-frontend.git
       - run: cd 3w5-h22-tp2-frontend && npm i && npm run build
       - run: mkdir 3w5-h22-tp2-backend/public
-      - run: cp 3w5-h22-tp2-frontend/build 3w5-h22-tp2-backend/public
+      - run: cp -rT 3w5-h22-tp2-frontend/build 3w5-h22-tp2-backend/public
+      - persist_to_workspace:
+        root: .
+        paths:
+          - 3w5-h22-tp2-backend
+  
+  deploy:
+    machine: true
+    steps:
+      - attach_workspace:
+        at: .
+      - cd 3w5-h22-tp2-backend && ls -Rl
 
 workflows:
   test-and-deploy:
