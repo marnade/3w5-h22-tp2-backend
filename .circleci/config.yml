@@ -4,7 +4,8 @@ orbs:
 
 jobs:
   checkoutAndTest:
-    - node/test
+    steps:
+      - node/test
 
   integrateFrontend:
     steps:
