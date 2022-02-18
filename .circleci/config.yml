@@ -13,9 +13,9 @@ jobs:
       - run: mkdir 3w5-h22-tp2-backend/public
       - run: cp -rT 3w5-h22-tp2-frontend/build 3w5-h22-tp2-backend/public
       - persist_to_workspace:
-        root: .
-        paths:
-          - 3w5-h22-tp2-backend
+          root: .
+          paths:
+            - 3w5-h22-tp2-backend
   
   deploy:
     machine: true
