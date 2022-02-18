@@ -4,11 +4,9 @@ orbs:
 
 jobs:
   checkoutAndTest:
-    executor:
-      name: node/default
-      tag: 13.14
+    machine: true
     steps:
-      - node/install-packages
+      - checkout
       - node/test
 
   integrateFrontend:
