@@ -22,7 +22,7 @@ jobs:
     steps:
       - attach_workspace:
           at: .
-      - cd 3w5-h22-tp2-backend && ls -Rl
+      - run: cd 3w5-h22-tp2-backend && ls -Rl
 
 workflows:
   test-and-deploy:
