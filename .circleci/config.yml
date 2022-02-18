@@ -3,7 +3,6 @@ orbs:
   node: circleci/node@5.0.0
 
 jobs:
-  - node/test
   integrateFrontend:
     machine: true
     steps:
