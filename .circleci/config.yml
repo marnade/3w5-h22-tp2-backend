@@ -1,13 +1,9 @@
-version: '2.1'
+version: 2.1
 orbs:
   node: circleci/node@5.0.0
 
 jobs:
-  checkoutAndTest:
-    machine: true
-    steps:
-      - checkout
-      - node/test
+  - node/test
 
   integrateFrontend:
     machine: true
