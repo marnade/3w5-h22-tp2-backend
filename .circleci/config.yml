@@ -4,9 +4,8 @@ orbs:
 
 jobs:
   checkoutAndTest:
-    machine: true
+    executor: node/default
     steps:
-      - checkout
       - node/test
 
   integrateFrontend:
