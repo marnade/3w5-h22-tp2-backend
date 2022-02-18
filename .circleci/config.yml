@@ -3,6 +3,8 @@ orbs:
   node: circleci/node@5.0.0
 
 jobs:
+  checkoutAndTest:
+    - node/test
   integrateFrontend:
     machine: true
     steps:
@@ -15,9 +17,9 @@ jobs:
 workflows:
   test-and-deploy:
     jobs:
-      - node/test #checkoutAndTest
+      - checkoutAndTest
       - integrateFrontend:
           requires: 
-            - node/test
+            - checkoutAndTest
 
       
