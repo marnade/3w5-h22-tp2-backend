@@ -3,12 +3,24 @@ orbs:
   node: circleci/node@5.0.0
 
 jobs:
-  - checkoutAndTest:
-    -node/test
+  checkoutAndTest:
+    - node/test
+
+  integrateFrontend:
+    steps:
+      - run: git clone https://github.com/marnade/3w5-h22-tp2-backend.git
+      - run: git clone https://github.com/marnade/3w5-h22-tp2-frontend.git
+      - run: cd 3w5-h22-tp2-frontend
+      - run: npm i
+      - run: npm run build
+      - run: cd ..
+      - run: mkdir 3w5-h22-tp2-backend/public
+      - run: cp 3w5-h22-tp2-frontend/build 3w5-h22-tp2-backend/public
 
 workflows:
   test-and-deploy:
     jobs:
       - checkoutAndTest
-      
+      - integrateFrontEnd
+
       
