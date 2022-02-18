@@ -8,6 +8,7 @@ jobs:
       name: node/default
       tag: 13.14
     steps:
+      - node/install-packages
       - node/test
 
   integrateFrontend:
