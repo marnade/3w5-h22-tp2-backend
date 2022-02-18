@@ -11,6 +11,7 @@ jobs:
       - node/test
 
   integrateFrontend:
+    machine: true
     steps:
       - run: git clone https://github.com/marnade/3w5-h22-tp2-backend.git
       - run: git clone https://github.com/marnade/3w5-h22-tp2-frontend.git
@@ -25,6 +26,7 @@ workflows:
   test-and-deploy:
     jobs:
       - checkoutAndTest
-      - integrateFrontEnd
+      - integrateFrontEnd:
+        requires: checkoutAndTest
 
       
